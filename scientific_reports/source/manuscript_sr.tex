@@ -24,12 +24,15 @@
 \title{Validation-Aligned Coreset Selection for Budgeted Few-Shot Classification}
 
 \author{
-[First Author]$^{1,*}$,
-[Second Author]$^{1}$,
-[Third Author]$^{2}$\\[0.5em]
-\small $^{1}$Department or Institute, University or Organization, City, Country\\
-\small $^{2}$Department or Institute, University or Organization, City, Country\\
-\small $^{*}$[corresponding.author@example.com]
+Haotong Luan$^{1,*}$,
+Xi Yu$^{1}$,
+Anran Lu$^{1}$,
+Keyi Chen$^{1}$,
+Jianwu Chen$^{2,\dagger}$\\[0.5em]
+\small $^{1}$College of Future Technology, Shenzhen Technology University, Shenzhen, China\\
+\small $^{2}$Sino-German College of Intelligent Manufacture, Shenzhen Technology University, Shenzhen, China\\
+\small $^{*}$Correspondence: lht20060306@outlook.com\\
+\small $^{\dagger}$Correspondence: chenjianwu@sztu.edu.cn
 }
 
 \date{}
@@ -37,7 +40,7 @@
 \begin{document}
 \maketitle
 
-% Complete the author names, affiliations, and corresponding-author email before journal upload.
+% The first author is set as corresponding author in this manuscript template.
 
 \begin{abstract}
 Few-shot classifiers can be dominated by the initial choice of which labelled examples are retained for training. We study this choice as a training-only algorithm-selection problem. Validation-Aligned Coreset Selection (VACS) evaluates a finite portfolio of class-balanced selectors on internal validation splits and then rebuilds the final coreset with the selected rule on the full training split. The portfolio contains random selection, herding, k-center, boundary selection, k-means medoids, and a margin-weighted representative selector. Across five public benchmarks, 80 matched low-budget dataset-seed-budget units, and a distance-weighted 3-nearest-neighbour classifier, the fast single-split protocol VACS-F reaches 70.6\% mean accuracy, numerically tying the strongest pooled static selector. The repeated protocol VACS-R averages five internal validation rankings and reaches 72.1\%, improving over herding by 1.54 percentage points with a 95\% bootstrap interval of 0.68 to 2.49 points. On a larger Covertype audit, VACS-R improves over herding but exactly matches the best static rule, MARC. Boundary-only, BADGE-inspired, frozen text-embedding, and frozen image-embedding checks define the method's limits. VACS supports a narrow conclusion: repeated training-only validation can make selector choice competitive under extreme labelled budgets, but it is not a broadly superior coreset rule.
@@ -201,7 +204,7 @@ The main driver is \texttt{experiments/run\_vacs\_experiments.py}; companion scr
 
 \section*{Acknowledgements}
 
-[Funding, institutional, compute, and data-provider acknowledgements to be completed by the authors before submission.]
+This work was supported by the National College Students’ Innovation and Entrepreneurship Training Program of Shenzhen Technology University (2026).
 
 \section*{Author contributions}
 
