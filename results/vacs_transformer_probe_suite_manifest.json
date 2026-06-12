@@ -1,0 +1,57 @@
+{
+  "probes": [
+    {
+      "probe": "DeBERTa-v3-small",
+      "dataset": "20newsgroups_20class_deberta",
+      "documents": 18846,
+      "embedding_dim": 768,
+      "vacs_accuracy": 0.09760788822072869,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.09931022285107888,
+      "gain": -0.0017023346303501885,
+      "runtime_sec": 86.7745795249939,
+      "embedding_runtime_sec": 57.87129616737366
+    },
+    {
+      "probe": "SmolLM2-360M, maxlen 64",
+      "dataset": "20newsgroups_20class_smolm2_360m_local",
+      "documents": 18846,
+      "embedding_dim": 960,
+      "vacs_accuracy": 0.3147992571630704,
+      "best_static_method": "marc",
+      "best_static_accuracy": 0.3144786876547577,
+      "gain": 0.0003205695083126625,
+      "runtime_sec": 2069.85506439209,
+      "embedding_runtime_sec": 2016.237492799759
+    },
+    {
+      "probe": "SmolLM2-360M, maxlen 128",
+      "dataset": "20newsgroups_20class_smolm2",
+      "documents": 18846,
+      "embedding_dim": 960,
+      "vacs_accuracy": 0.3735850725150336,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.3748010258224266,
+      "gain": -0.0012159533073929918,
+      "runtime_sec": 313.641544342041,
+      "embedding_runtime_sec": 235.4477915763855
+    },
+    {
+      "probe": "Qwen2.5-0.5B",
+      "dataset": "20newsgroups_20class_qwen2_5_0_5b_local",
+      "documents": 18846,
+      "embedding_dim": 896,
+      "vacs_accuracy": 0.4013309161655465,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.402381057658295,
+      "gain": -0.001050141492748513,
+      "runtime_sec": 141.30679941177368,
+      "embedding_runtime_sec": 110.53367066383362
+    }
+  ],
+  "interpretation": "Frozen Transformer text embeddings on full 20 Newsgroups are reported as boundary evidence. The suite contains no broad positive modern-embedding claim because gains are near zero or negative across the checked encoders.",
+  "probe_count": 4,
+  "positive_probe_count": 1,
+  "max_gain": 0.0003205695083126625,
+  "min_gain": -0.0017023346303501885
+}

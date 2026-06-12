@@ -1,0 +1,140 @@
+{
+  "input": "results/tables/vacs_all_results.csv",
+  "filter": {
+    "learner": "knn3",
+    "budget_per_class": [
+      1,
+      2
+    ],
+    "static_methods": [
+      "random",
+      "herding",
+      "kcenter",
+      "boundary",
+      "kmeans",
+      "marc",
+      "badge"
+    ]
+  },
+  "unit": [
+    "dataset",
+    "seed",
+    "budget_per_class"
+  ],
+  "bootstrap_reps": 20000,
+  "summary": [
+    {
+      "slice": "Pooled per-dataset-best",
+      "n": 80,
+      "best_static_method": "per-dataset",
+      "vacs_accuracy": 0.7061455779896032,
+      "best_static_accuracy": 0.7225741591455548,
+      "delta_accuracy": -0.016428581155951628,
+      "ci_low": -0.02980444527361126,
+      "ci_high": -0.006072546084264042,
+      "wins": 8,
+      "ties": 53,
+      "losses": 19,
+      "sign_p": 0.052238985896110535,
+      "delta_points": "-1.64",
+      "ci_points": "[-2.98,-0.61]",
+      "wtl": "8/53/19",
+      "sign_p_tex": "0.052"
+    },
+    {
+      "slice": "20NG",
+      "n": 16,
+      "best_static_method": "random",
+      "vacs_accuracy": 0.09653563848602754,
+      "best_static_accuracy": 0.12142951892465507,
+      "delta_accuracy": -0.024893880438627523,
+      "ci_low": -0.05334746418464803,
+      "ci_high": -0.00033134727626462404,
+      "wins": 4,
+      "ties": 7,
+      "losses": 5,
+      "sign_p": 1.0,
+      "delta_points": "-2.49",
+      "ci_points": "[-5.33,-0.03]",
+      "wtl": "4/7/5",
+      "sign_p_tex": "1.000"
+    },
+    {
+      "slice": "Breast cancer",
+      "n": 16,
+      "best_static_method": "kmeans",
+      "vacs_accuracy": 0.933845029239766,
+      "best_static_accuracy": 0.9353070175438596,
+      "delta_accuracy": -0.0014619883040935741,
+      "ci_low": -0.0036549707602339457,
+      "ci_high": 0.0,
+      "wins": 0,
+      "ties": 14,
+      "losses": 2,
+      "sign_p": 0.5,
+      "delta_points": "-0.15",
+      "ci_points": "[-0.37,+0.00]",
+      "wtl": "0/14/2",
+      "sign_p_tex": "0.500"
+    },
+    {
+      "slice": "Digits",
+      "n": 16,
+      "best_static_method": "kmeans",
+      "vacs_accuracy": 0.8232638888888889,
+      "best_static_accuracy": 0.8244212962962962,
+      "delta_accuracy": -0.0011574074074074056,
+      "ci_low": -0.00497685185185185,
+      "ci_high": 0.0018518518518518545,
+      "wins": 2,
+      "ties": 12,
+      "losses": 2,
+      "sign_p": 1.0,
+      "delta_points": "-0.12",
+      "ci_points": "[-0.50,+0.19]",
+      "wtl": "2/12/2",
+      "sign_p_tex": "1.000"
+    },
+    {
+      "slice": "iris",
+      "n": 16,
+      "best_static_method": "herding",
+      "vacs_accuracy": 0.763888888888889,
+      "best_static_accuracy": 0.8069444444444445,
+      "delta_accuracy": -0.04305555555555557,
+      "ci_low": -0.09861111111111112,
+      "ci_high": -0.001388888888888891,
+      "wins": 2,
+      "ties": 9,
+      "losses": 5,
+      "sign_p": 0.453125,
+      "delta_points": "-4.31",
+      "ci_points": "[-9.86,-0.14]",
+      "wtl": "2/9/5",
+      "sign_p_tex": "0.453"
+    },
+    {
+      "slice": "Wine",
+      "n": 16,
+      "best_static_method": "herding",
+      "vacs_accuracy": 0.9131944444444444,
+      "best_static_accuracy": 0.9247685185185186,
+      "delta_accuracy": -0.01157407407407407,
+      "ci_low": -0.02199074074074074,
+      "ci_high": -0.00347222222222221,
+      "wins": 0,
+      "ties": 11,
+      "losses": 5,
+      "sign_p": 0.0625,
+      "delta_points": "-1.16",
+      "ci_points": "[-2.20,-0.35]",
+      "wtl": "0/11/5",
+      "sign_p_tex": "0.062"
+    }
+  ],
+  "outputs": [
+    "results/tables/vacs_dataset_best_static_paired.csv",
+    "results/tables/vacs_dataset_best_static_paired_summary.csv",
+    "results/tables/vacs_dataset_best_static_paired_table.tex"
+  ]
+}

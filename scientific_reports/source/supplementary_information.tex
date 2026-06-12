@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{times}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{caption}
+\usepackage{setspace}
+\usepackage[pagewise]{lineno}
+
+\doublespacing
+\linenumbers
+\emergencystretch=3em
+
+\title{Supplementary Information for ``Validation-Aligned Coreset Selection for Budgeted Few-Shot Classification''}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section*{Supplementary Note 1: claim boundary}
+
+The main article reports a bounded claim. VACS-R is the strongest evaluated training-only deployable protocol in the five-dataset low-budget 3-nearest-neighbour benchmark, but the experiments do not establish broad state-of-the-art performance. The supplementary tables below document the paired fast-protocol audit, ablations, non-deployable hindsight-static reference, validation-size diagnostics, selection costs, and frozen embedding boundary checks.
+
+\section*{Supplementary Table 1: paired low-budget fast-protocol stability}
+
+This table reports VACS-F minus herding differences over matched low-budget units.
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\input{../tables/Supplementary_Table_1_stability.tex}
+\end{center}
+
+\section*{Supplementary Table 2: ablation diagnostics}
+
+The ablation table separates the validation wrapper from individual selector candidates and from the final rebuild convention.
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_2_ablation.tex}
+\end{center}
+
+\section*{Supplementary Table 3: non-deployable dataset-hindsight static audit}
+
+The per-dataset static reference is selected with hindsight from the low-budget result table, and is therefore diagnostic rather than deployable.
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\input{../tables/Supplementary_Table_3_hindsight_static.tex}
+\end{center}
+
+\section*{Supplementary Table 4: validation-size reliability}
+
+This diagnostic repeats the internal validation-ranking analysis at 10\%, 20\%, 25\%, and 33\% validation fractions.
+
+\begin{center}
+\scriptsize
+\setlength{\tabcolsep}{2.2pt}
+\input{../tables/Supplementary_Table_4_validation_size.tex}
+\end{center}
+
+\section*{Supplementary Table 5: selection cost}
+
+The cost diagnostic reports selection-only time for herding and validation-plus-rebuild time for VACS-F over the matched low-budget decisions.
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_5_selection_cost.tex}
+\end{center}
+
+\section*{Supplementary Table 6: frozen transformer probes}
+
+The frozen transformer probes are boundary evidence. They do not support a broad modern text-embedding superiority claim.
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_6_transformer_probe.tex}
+\end{center}
+
+\section*{Supplementary Tables 7 and 8: frozen image-embedding probes}
+
+The image probes widen benchmark coverage but tie the strongest static selector in the tested one-seed, one-example-per-class settings.
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_7_fashionmnist_probe.tex}
+\end{center}
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_8_cifar_probe.tex}
+\end{center}
+
+\section*{Supplementary Table 9: full 20-class sparse-text stress boundary}
+
+The compact full-20-class TF-IDF stress check is negative for VACS relative to static random and is kept as a claim boundary.
+
+\begin{center}
+\small
+\input{../tables/Supplementary_Table_9_full20news.tex}
+\end{center}
+
+\section*{Supplementary Note 2: reproducibility files}
+
+The project package includes the Python scripts used to regenerate the primary result manifest, all tables included in the manuscript and supplementary information, the workflow and diagnostic figures, and the consistency checks that compare manuscript claims with generated result files. The main experiment driver is \texttt{experiments/run\_vacs\_experiments.py}. Covertype audits, repeated-validation audits, validation-size diagnostics, and figure generation are implemented as separate companion scripts for auditability.
+
+\end{document}

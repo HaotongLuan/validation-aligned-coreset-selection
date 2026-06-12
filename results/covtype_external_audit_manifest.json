@@ -1,0 +1,133 @@
+{
+  "dataset": "Covertype",
+  "source": "UCI covtype.data.gz",
+  "data_path": ".sklearn_data/covtype.data.gz",
+  "sample": {
+    "sample_seed": 20270609,
+    "max_per_class": 5000,
+    "original_n": 581012,
+    "sampled_n": 32747,
+    "classes": 7,
+    "original_counts": {
+      "0": 211840,
+      "1": 283301,
+      "2": 35754,
+      "3": 2747,
+      "4": 9493,
+      "5": 17367,
+      "6": 20510
+    },
+    "sampled_counts": {
+      "0": 5000,
+      "1": 5000,
+      "2": 5000,
+      "3": 2747,
+      "4": 5000,
+      "5": 5000,
+      "6": 5000
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "budgets_per_class": [
+    1,
+    2
+  ],
+  "methods": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc",
+    "vacs_f",
+    "vacs_r"
+  ],
+  "best_static_method": "marc",
+  "runtime_sec": 119.0513322353363,
+  "smoke": false,
+  "outputs": [
+    "results/tables/vacs_covtype_external_results.csv",
+    "results/tables/vacs_covtype_external_summary.csv",
+    "results/tables/vacs_covtype_external_paired_summary.csv",
+    "results/tables/vacs_covtype_external_table.tex"
+  ],
+  "paired_summary": [
+    {
+      "target": "vacs_f",
+      "comparator": "herding",
+      "n": 16,
+      "target_accuracy": 0.44097964376590326,
+      "comparator_accuracy": 0.3913295165394402,
+      "delta_accuracy": 0.0496501272264631,
+      "ci_low": 0.024917143765903312,
+      "ci_high": 0.07416682569974554,
+      "wins": 8,
+      "ties": 8,
+      "losses": 0,
+      "sign_p": 0.0078125,
+      "delta_points": "+4.97",
+      "ci_points": "[+2.49,+7.42]",
+      "wtl": "8/8/0"
+    },
+    {
+      "target": "vacs_r",
+      "comparator": "herding",
+      "n": 16,
+      "target_accuracy": 0.44097964376590326,
+      "comparator_accuracy": 0.3913295165394402,
+      "delta_accuracy": 0.0496501272264631,
+      "ci_low": 0.024917143765903312,
+      "ci_high": 0.07416682569974554,
+      "wins": 8,
+      "ties": 8,
+      "losses": 0,
+      "sign_p": 0.0078125,
+      "delta_points": "+4.97",
+      "ci_points": "[+2.49,+7.42]",
+      "wtl": "8/8/0"
+    },
+    {
+      "target": "vacs_f",
+      "comparator": "marc",
+      "n": 16,
+      "target_accuracy": 0.44097964376590326,
+      "comparator_accuracy": 0.44097964376590326,
+      "delta_accuracy": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "wins": 0,
+      "ties": 16,
+      "losses": 0,
+      "sign_p": 1.0,
+      "delta_points": "+0.00",
+      "ci_points": "[+0.00,+0.00]",
+      "wtl": "0/16/0"
+    },
+    {
+      "target": "vacs_r",
+      "comparator": "marc",
+      "n": 16,
+      "target_accuracy": 0.44097964376590326,
+      "comparator_accuracy": 0.44097964376590326,
+      "delta_accuracy": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "wins": 0,
+      "ties": 16,
+      "losses": 0,
+      "sign_p": 1.0,
+      "delta_points": "+0.00",
+      "ci_points": "[+0.00,+0.00]",
+      "wtl": "0/16/0"
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "validation_fractions": [
+    0.1,
+    0.2,
+    0.25,
+    0.33
+  ],
+  "budgets_per_class": [
+    1,
+    2
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "selectors": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc"
+  ],
+  "best_static_method": "kmeans",
+  "best_static_label": "K-means",
+  "best_static_accuracy": 0.6816836770841737,
+  "severe_regret_threshold": 0.05,
+  "runtime_seconds": 1013.004546880722,
+  "datasets": [
+    {
+      "name": "20newsgroups",
+      "label": "20 Newsgroups",
+      "units": 16
+    },
+    {
+      "name": "breast_cancer",
+      "label": "Breast cancer",
+      "units": 16
+    },
+    {
+      "name": "digits",
+      "label": "Digits",
+      "units": 16
+    },
+    {
+      "name": "wine",
+      "label": "Wine",
+      "units": 16
+    }
+  ]
+}

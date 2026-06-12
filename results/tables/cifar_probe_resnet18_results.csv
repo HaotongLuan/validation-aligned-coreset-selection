@@ -1,0 +1,8 @@
+dataset,seed,budget_per_class,method,selector_detail,selected,accuracy,macro_f1
+cifar10,0,1,random,random,10,0.4444,0.43392108503778815
+cifar10,0,1,herding,herding,10,0.6473,0.6454660122151592
+cifar10,0,1,kcenter,kcenter,10,0.6473,0.6454660122151592
+cifar10,0,1,boundary,boundary,10,0.0483,0.046778720828193884
+cifar10,0,1,kmeans,kmeans,10,0.6473,0.6454660122151592
+cifar10,0,1,marc,marc,10,0.6473,0.6454660122151592
+cifar10,0,1,vacs,herding,10,0.6473,0.6454660122151592

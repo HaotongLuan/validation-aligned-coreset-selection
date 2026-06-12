@@ -1,0 +1,142 @@
+{
+  "dataset": "Covertype",
+  "purpose": "confirmatory_larger_cap_fresh_sample_seed",
+  "source": "UCI covtype.data.gz",
+  "data_path": ".sklearn_data/covtype.data.gz",
+  "sample": {
+    "sample_seed": 20270610,
+    "max_per_class": 10000,
+    "original_n": 581012,
+    "sampled_n": 62240,
+    "classes": 7,
+    "original_counts": {
+      "0": 211840,
+      "1": 283301,
+      "2": 35754,
+      "3": 2747,
+      "4": 9493,
+      "5": 17367,
+      "6": 20510
+    },
+    "sampled_counts": {
+      "0": 10000,
+      "1": 10000,
+      "2": 10000,
+      "3": 2747,
+      "4": 9493,
+      "5": 10000,
+      "6": 10000
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "budgets_per_class": [
+    1,
+    2
+  ],
+  "methods": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc",
+    "vacs_f",
+    "vacs_r"
+  ],
+  "best_static_method": "marc",
+  "runtime_sec": 270.19892024993896,
+  "smoke": false,
+  "outputs": [
+    "results/tables/vacs_covtype_confirmatory_results.csv",
+    "results/tables/vacs_covtype_confirmatory_summary.csv",
+    "results/tables/vacs_covtype_confirmatory_paired_summary.csv",
+    "results/tables/vacs_covtype_confirmatory_table.tex"
+  ],
+  "paired_summary": [
+    {
+      "target": "vacs_f",
+      "comparator": "herding",
+      "n": 32,
+      "target_accuracy": 0.43968073853898887,
+      "comparator_accuracy": 0.3861764942159383,
+      "delta_accuracy": 0.05350424432305055,
+      "ci_low": 0.0348379676119323,
+      "ci_high": 0.07227629438464005,
+      "wins": 16,
+      "ties": 16,
+      "losses": 0,
+      "sign_p": 3.0517578125e-05,
+      "delta_points": "+5.35",
+      "ci_points": "[+3.48,+7.23]",
+      "wtl": "16/16/0"
+    },
+    {
+      "target": "vacs_r",
+      "comparator": "herding",
+      "n": 32,
+      "target_accuracy": 0.4404188089117395,
+      "comparator_accuracy": 0.3861764942159383,
+      "delta_accuracy": 0.054242314695801194,
+      "ci_low": 0.0352262076906598,
+      "ci_high": 0.07329499049378747,
+      "wins": 16,
+      "ties": 16,
+      "losses": 0,
+      "sign_p": 3.0517578125e-05,
+      "delta_points": "+5.42",
+      "ci_points": "[+3.52,+7.33]",
+      "wtl": "16/16/0"
+    },
+    {
+      "target": "vacs_f",
+      "comparator": "marc",
+      "n": 32,
+      "target_accuracy": 0.43968073853898887,
+      "comparator_accuracy": 0.4404188089117395,
+      "delta_accuracy": -0.0007380703727506415,
+      "ci_low": -0.0022142111182519245,
+      "ci_high": 0.0,
+      "wins": 0,
+      "ties": 31,
+      "losses": 1,
+      "sign_p": 1.0,
+      "delta_points": "-0.07",
+      "ci_points": "[-0.22,+0.00]",
+      "wtl": "0/31/1"
+    },
+    {
+      "target": "vacs_r",
+      "comparator": "marc",
+      "n": 32,
+      "target_accuracy": 0.4404188089117395,
+      "comparator_accuracy": 0.4404188089117395,
+      "delta_accuracy": 0.0,
+      "ci_low": 0.0,
+      "ci_high": 0.0,
+      "wins": 0,
+      "ties": 32,
+      "losses": 0,
+      "sign_p": 1.0,
+      "delta_points": "+0.00",
+      "ci_points": "[+0.00,+0.00]",
+      "wtl": "0/32/0"
+    }
+  ]
+}

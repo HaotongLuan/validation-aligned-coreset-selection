@@ -1,0 +1,161 @@
+slice,dataset,seed,budget_per_class,validation_top,test_top,top1_agree,rank_correlation,regret,severe
+Pooled,20newsgroups,0,1,boundary,boundary,True,0.942857142857143,0.0,False
+Pooled,20newsgroups,0,2,boundary,boundary,True,1.0,0.0,False
+Pooled,20newsgroups,1,1,random,boundary,False,0.942857142857143,0.012026883622214365,False
+Pooled,20newsgroups,1,2,boundary,random,False,0.7714285714285715,0.1489211177927131,True
+Pooled,20newsgroups,2,1,boundary,random,False,0.6,0.08949416342412453,True
+Pooled,20newsgroups,2,2,random,boundary,False,0.7142857142857143,0.010435090201627167,False
+Pooled,20newsgroups,3,1,random,random,True,1.0,0.0,False
+Pooled,20newsgroups,3,2,boundary,boundary,True,-0.028571428571428574,0.0,False
+Pooled,20newsgroups,4,1,boundary,random,False,0.942857142857143,0.09568447117085248,True
+Pooled,20newsgroups,4,2,boundary,random,False,0.2571428571428572,0.012557481429076756,False
+Pooled,20newsgroups,5,1,random,random,True,1.0,0.0,False
+Pooled,20newsgroups,5,2,boundary,boundary,True,0.6571428571428573,0.0,False
+Pooled,20newsgroups,6,1,boundary,random,False,-0.2,0.129642730810046,True
+Pooled,20newsgroups,6,2,random,boundary,False,0.942857142857143,0.005305978068623984,False
+Pooled,20newsgroups,7,1,random,random,True,1.0,0.0,False
+Pooled,20newsgroups,7,2,random,random,True,0.8285714285714287,0.0,False
+Pooled,breast_cancer,0,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,0,2,kmeans,kmeans,True,0.8285714285714287,0.0,False
+Pooled,breast_cancer,1,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,1,2,kmeans,random,False,0.942857142857143,0.023391812865497075,False
+Pooled,breast_cancer,2,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,2,2,marc,kmeans,False,0.942857142857143,0.011695906432748537,False
+Pooled,breast_cancer,3,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,3,2,kmeans,kmeans,True,1.0,0.0,False
+Pooled,breast_cancer,4,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,4,2,kmeans,kmeans,True,0.8857142857142858,0.0,False
+Pooled,breast_cancer,5,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,5,2,herding,kmeans,False,0.942857142857143,0.011695906432748537,False
+Pooled,breast_cancer,6,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,6,2,kmeans,kmeans,True,0.7714285714285715,0.0,False
+Pooled,breast_cancer,7,1,herding,herding,True,1.0,0.0,False
+Pooled,breast_cancer,7,2,kmeans,random,False,0.7142857142857143,0.0,False
+Pooled,digits,0,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,0,2,herding,herding,True,1.0,0.0,False
+Pooled,digits,1,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,1,2,kmeans,kmeans,True,1.0,0.0,False
+Pooled,digits,2,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,2,2,kmeans,kmeans,True,0.942857142857143,0.0,False
+Pooled,digits,3,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,3,2,kmeans,kmeans,True,0.942857142857143,0.0,False
+Pooled,digits,4,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,4,2,herding,marc,False,0.7714285714285715,0.0092592592592593,False
+Pooled,digits,5,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,5,2,kmeans,herding,False,0.8285714285714287,0.011111111111111183,False
+Pooled,digits,6,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,6,2,herding,kmeans,False,0.7142857142857143,0.024074074074074026,False
+Pooled,digits,7,1,herding,herding,True,1.0,0.0,False
+Pooled,digits,7,2,herding,marc,False,0.8285714285714287,0.0018518518518518823,False
+Pooled,iris,0,1,herding,random,False,0.4285714285714286,0.022222222222222254,False
+Pooled,iris,0,2,random,kmeans,False,0.7142857142857143,0.0444444444444444,False
+Pooled,iris,1,1,herding,random,False,0.4285714285714286,0.06666666666666676,True
+Pooled,iris,1,2,random,random,True,1.0,0.0,False
+Pooled,iris,2,1,herding,herding,True,1.0,0.0,False
+Pooled,iris,2,2,kmeans,random,False,0.6,0.022222222222222143,False
+Pooled,iris,3,1,herding,herding,True,1.0,0.0,False
+Pooled,iris,3,2,random,herding,False,0.3714285714285715,0.022222222222222254,False
+Pooled,iris,4,1,boundary,random,False,-0.4285714285714286,0.3777777777777778,True
+Pooled,iris,4,2,herding,herding,True,0.48571428571428577,0.0,False
+Pooled,iris,5,1,random,herding,False,0.4285714285714286,0.0,False
+Pooled,iris,5,2,random,marc,False,0.14285714285714288,0.288888888888889,True
+Pooled,iris,6,1,herding,herding,True,1.0,0.0,False
+Pooled,iris,6,2,kmeans,marc,False,0.3142857142857143,0.06666666666666665,True
+Pooled,iris,7,1,herding,herding,True,1.0,0.0,False
+Pooled,iris,7,2,kmeans,herding,False,0.4285714285714286,0.06666666666666676,True
+Pooled,wine,0,1,herding,herding,True,1.0,0.0,False
+Pooled,wine,0,2,kmeans,herding,False,0.8285714285714287,0.03703703703703698,False
+Pooled,wine,1,1,herding,herding,True,1.0,0.0,False
+Pooled,wine,1,2,kcenter,herding,False,0.2571428571428572,0.01851851851851849,False
+Pooled,wine,2,1,herding,herding,True,1.0,0.0,False
+Pooled,wine,2,2,marc,herding,False,0.7714285714285715,0.05555555555555558,True
+Pooled,wine,3,1,herding,random,False,0.4285714285714286,0.0185185185185186,False
+Pooled,wine,3,2,herding,marc,False,0.7714285714285715,0.01851851851851849,False
+Pooled,wine,4,1,herding,random,False,0.4285714285714286,0.0,False
+Pooled,wine,4,2,herding,marc,False,0.3142857142857143,0.05555555555555558,True
+Pooled,wine,5,1,herding,herding,True,1.0,0.0,False
+Pooled,wine,5,2,kmeans,herding,False,0.7142857142857143,0.01851851851851849,False
+Pooled,wine,6,1,random,herding,False,0.4285714285714286,0.05555555555555558,True
+Pooled,wine,6,2,herding,herding,True,0.942857142857143,0.0,False
+Pooled,wine,7,1,herding,herding,True,1.0,0.0,False
+Pooled,wine,7,2,herding,herding,True,0.942857142857143,0.0,False
+20NG,20newsgroups,0,1,boundary,boundary,True,0.942857142857143,0.0,False
+20NG,20newsgroups,0,2,boundary,boundary,True,1.0,0.0,False
+20NG,20newsgroups,1,1,random,boundary,False,0.942857142857143,0.012026883622214365,False
+20NG,20newsgroups,1,2,boundary,random,False,0.7714285714285715,0.1489211177927131,True
+20NG,20newsgroups,2,1,boundary,random,False,0.6,0.08949416342412453,True
+20NG,20newsgroups,2,2,random,boundary,False,0.7142857142857143,0.010435090201627167,False
+20NG,20newsgroups,3,1,random,random,True,1.0,0.0,False
+20NG,20newsgroups,3,2,boundary,boundary,True,-0.028571428571428574,0.0,False
+20NG,20newsgroups,4,1,boundary,random,False,0.942857142857143,0.09568447117085248,True
+20NG,20newsgroups,4,2,boundary,random,False,0.2571428571428572,0.012557481429076756,False
+20NG,20newsgroups,5,1,random,random,True,1.0,0.0,False
+20NG,20newsgroups,5,2,boundary,boundary,True,0.6571428571428573,0.0,False
+20NG,20newsgroups,6,1,boundary,random,False,-0.2,0.129642730810046,True
+20NG,20newsgroups,6,2,random,boundary,False,0.942857142857143,0.005305978068623984,False
+20NG,20newsgroups,7,1,random,random,True,1.0,0.0,False
+20NG,20newsgroups,7,2,random,random,True,0.8285714285714287,0.0,False
+Breast cancer,breast_cancer,0,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,0,2,kmeans,kmeans,True,0.8285714285714287,0.0,False
+Breast cancer,breast_cancer,1,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,1,2,kmeans,random,False,0.942857142857143,0.023391812865497075,False
+Breast cancer,breast_cancer,2,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,2,2,marc,kmeans,False,0.942857142857143,0.011695906432748537,False
+Breast cancer,breast_cancer,3,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,3,2,kmeans,kmeans,True,1.0,0.0,False
+Breast cancer,breast_cancer,4,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,4,2,kmeans,kmeans,True,0.8857142857142858,0.0,False
+Breast cancer,breast_cancer,5,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,5,2,herding,kmeans,False,0.942857142857143,0.011695906432748537,False
+Breast cancer,breast_cancer,6,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,6,2,kmeans,kmeans,True,0.7714285714285715,0.0,False
+Breast cancer,breast_cancer,7,1,herding,herding,True,1.0,0.0,False
+Breast cancer,breast_cancer,7,2,kmeans,random,False,0.7142857142857143,0.0,False
+Digits,digits,0,1,herding,herding,True,1.0,0.0,False
+Digits,digits,0,2,herding,herding,True,1.0,0.0,False
+Digits,digits,1,1,herding,herding,True,1.0,0.0,False
+Digits,digits,1,2,kmeans,kmeans,True,1.0,0.0,False
+Digits,digits,2,1,herding,herding,True,1.0,0.0,False
+Digits,digits,2,2,kmeans,kmeans,True,0.942857142857143,0.0,False
+Digits,digits,3,1,herding,herding,True,1.0,0.0,False
+Digits,digits,3,2,kmeans,kmeans,True,0.942857142857143,0.0,False
+Digits,digits,4,1,herding,herding,True,1.0,0.0,False
+Digits,digits,4,2,herding,marc,False,0.7714285714285715,0.0092592592592593,False
+Digits,digits,5,1,herding,herding,True,1.0,0.0,False
+Digits,digits,5,2,kmeans,herding,False,0.8285714285714287,0.011111111111111183,False
+Digits,digits,6,1,herding,herding,True,1.0,0.0,False
+Digits,digits,6,2,herding,kmeans,False,0.7142857142857143,0.024074074074074026,False
+Digits,digits,7,1,herding,herding,True,1.0,0.0,False
+Digits,digits,7,2,herding,marc,False,0.8285714285714287,0.0018518518518518823,False
+Iris,iris,0,1,herding,random,False,0.4285714285714286,0.022222222222222254,False
+Iris,iris,0,2,random,kmeans,False,0.7142857142857143,0.0444444444444444,False
+Iris,iris,1,1,herding,random,False,0.4285714285714286,0.06666666666666676,True
+Iris,iris,1,2,random,random,True,1.0,0.0,False
+Iris,iris,2,1,herding,herding,True,1.0,0.0,False
+Iris,iris,2,2,kmeans,random,False,0.6,0.022222222222222143,False
+Iris,iris,3,1,herding,herding,True,1.0,0.0,False
+Iris,iris,3,2,random,herding,False,0.3714285714285715,0.022222222222222254,False
+Iris,iris,4,1,boundary,random,False,-0.4285714285714286,0.3777777777777778,True
+Iris,iris,4,2,herding,herding,True,0.48571428571428577,0.0,False
+Iris,iris,5,1,random,herding,False,0.4285714285714286,0.0,False
+Iris,iris,5,2,random,marc,False,0.14285714285714288,0.288888888888889,True
+Iris,iris,6,1,herding,herding,True,1.0,0.0,False
+Iris,iris,6,2,kmeans,marc,False,0.3142857142857143,0.06666666666666665,True
+Iris,iris,7,1,herding,herding,True,1.0,0.0,False
+Iris,iris,7,2,kmeans,herding,False,0.4285714285714286,0.06666666666666676,True
+Wine,wine,0,1,herding,herding,True,1.0,0.0,False
+Wine,wine,0,2,kmeans,herding,False,0.8285714285714287,0.03703703703703698,False
+Wine,wine,1,1,herding,herding,True,1.0,0.0,False
+Wine,wine,1,2,kcenter,herding,False,0.2571428571428572,0.01851851851851849,False
+Wine,wine,2,1,herding,herding,True,1.0,0.0,False
+Wine,wine,2,2,marc,herding,False,0.7714285714285715,0.05555555555555558,True
+Wine,wine,3,1,herding,random,False,0.4285714285714286,0.0185185185185186,False
+Wine,wine,3,2,herding,marc,False,0.7714285714285715,0.01851851851851849,False
+Wine,wine,4,1,herding,random,False,0.4285714285714286,0.0,False
+Wine,wine,4,2,herding,marc,False,0.3142857142857143,0.05555555555555558,True
+Wine,wine,5,1,herding,herding,True,1.0,0.0,False
+Wine,wine,5,2,kmeans,herding,False,0.7142857142857143,0.01851851851851849,False
+Wine,wine,6,1,random,herding,False,0.4285714285714286,0.05555555555555558,True
+Wine,wine,6,2,herding,herding,True,0.942857142857143,0.0,False
+Wine,wine,7,1,herding,herding,True,1.0,0.0,False
+Wine,wine,7,2,herding,herding,True,0.942857142857143,0.0,False

@@ -1,0 +1,64 @@
+{
+  "backbone_name": "convnext_tiny",
+  "backbone_class": "ConvNeXt",
+  "backbone_weights": "ConvNeXt_Tiny_Weights",
+  "device": "NVIDIA GeForce RTX 3090",
+  "datasets": [
+    {
+      "dataset": "fashion_mnist",
+      "display": "Fashion-MNIST",
+      "train_examples": 60000,
+      "test_examples": 10000,
+      "embedding_dim": 768,
+      "train_embedding_runtime_sec": 65.86346387863159,
+      "test_embedding_runtime_sec": 10.072889804840088
+    }
+  ],
+  "seeds": [
+    0
+  ],
+  "budgets_per_class": [
+    1
+  ],
+  "methods": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc",
+    "vacs"
+  ],
+  "runtime_sec": 1398.6626386642456,
+  "embedding_runtime_sec": 75.93635368347168,
+  "batch_size": 128,
+  "num_workers": 2,
+  "interpretation": "Frozen torchvision image embeddings are reported as supplemental boundary evidence. The suite is intended to widen benchmark coverage beyond classical tabular and text features, not to establish a new state-of-the-art claim.",
+  "probe_count": 1,
+  "positive_dataset_count": 0,
+  "pooled_gain": 0.0,
+  "summary_rows": [
+    {
+      "dataset": "fashion_mnist",
+      "display": "Fashion-MNIST",
+      "units": 1,
+      "vacs_accuracy": 0.756,
+      "vacs_macro_f1": 0.7515244832007548,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.756,
+      "best_static_macro_f1": 0.7515244832007548,
+      "gain": 0.0
+    },
+    {
+      "dataset": "pooled",
+      "display": "Pooled",
+      "units": 1,
+      "vacs_accuracy": 0.756,
+      "vacs_macro_f1": 0.7515244832007548,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.756,
+      "best_static_macro_f1": 0.7515244832007548,
+      "gain": 0.0
+    }
+  ]
+}

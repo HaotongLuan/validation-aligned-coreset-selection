@@ -1,0 +1,2 @@
+comparator,blocks,units_per_block,delta,ci,positive_blocks,tied_blocks,negative_blocks,min_delta,max_delta
+herding,8,10,0.0002122184366706156,"[-1.02,+0.97]",5,0,3,-0.027439146740805553,0.021848673091761344

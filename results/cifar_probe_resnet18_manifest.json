@@ -1,0 +1,65 @@
+{
+  "backbone_name": "resnet18",
+  "backbone_class": "ResNet",
+  "backbone_weights": "ResNet18_Weights",
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "datasets": [
+    {
+      "dataset": "cifar10",
+      "display": "CIFAR-10",
+      "train_examples": 50000,
+      "test_examples": 10000,
+      "embedding_dim": 512,
+      "train_embedding_runtime_sec": 294.5727300643921,
+      "test_embedding_runtime_sec": 56.452372312545776
+    }
+  ],
+  "seeds": [
+    0
+  ],
+  "budgets_per_class": [
+    1
+  ],
+  "methods": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc",
+    "vacs"
+  ],
+  "runtime_sec": 362.5650587081909,
+  "embedding_runtime_sec": 351.02510237693787,
+  "batch_size": 64,
+  "num_workers": 0,
+  "interpretation": "Frozen torchvision image embeddings are reported as supplemental boundary evidence. The suite is intended to widen benchmark coverage beyond classical tabular and text features, not to establish a new state-of-the-art claim.",
+  "output_stem": "cifar_probe_resnet18",
+  "probe_count": 1,
+  "positive_dataset_count": 0,
+  "pooled_gain": 0.0,
+  "summary_rows": [
+    {
+      "dataset": "cifar10",
+      "display": "CIFAR-10",
+      "units": 1,
+      "vacs_accuracy": 0.6473,
+      "vacs_macro_f1": 0.6454660122151592,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.6473,
+      "best_static_macro_f1": 0.6454660122151592,
+      "gain": 0.0
+    },
+    {
+      "dataset": "pooled",
+      "display": "Pooled",
+      "units": 1,
+      "vacs_accuracy": 0.6473,
+      "vacs_macro_f1": 0.6454660122151592,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.6473,
+      "best_static_macro_f1": 0.6454660122151592,
+      "gain": 0.0
+    }
+  ]
+}

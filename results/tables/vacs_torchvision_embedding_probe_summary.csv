@@ -1,0 +1,3 @@
+dataset,display,units,vacs_accuracy,vacs_macro_f1,best_static_method,best_static_accuracy,best_static_macro_f1,gain
+fashion_mnist,Fashion-MNIST,1,0.756,0.7515244832007548,herding,0.756,0.7515244832007548,0.0
+pooled,Pooled,1,0.756,0.7515244832007548,herding,0.756,0.7515244832007548,0.0

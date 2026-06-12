@@ -1,0 +1,2 @@
+dataset,display_name,classes,methods,units,vacs_accuracy,best_static_method,best_static_accuracy,gain,relative_error_reduction,top_selector,top_selector_count,selector_mix,seed_blocks
+20newsgroups,20 Newsgroups (20-class),20,"random,herding,kcenter,boundary,kmeans,marc,badge,vacs",16,0.09653563848602759,random,0.12142951892465512,-0.02489388043862753,-0.028334528617622246,boundary,9,"{""boundary"": 9, ""herding"": 0, ""kcenter"": 0, ""kmeans"": 0, ""marc"": 0, ""random"": 7}",8

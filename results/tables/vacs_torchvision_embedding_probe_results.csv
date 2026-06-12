@@ -1,0 +1,8 @@
+dataset,seed,budget_per_class,method,selector_detail,selected,accuracy,macro_f1
+fashion_mnist,0,1,random,random,10,0.5779,0.576295125133654
+fashion_mnist,0,1,herding,herding,10,0.756,0.7515244832007548
+fashion_mnist,0,1,kcenter,kcenter,10,0.756,0.7515244832007548
+fashion_mnist,0,1,boundary,boundary,10,0.0392,0.041185064062379505
+fashion_mnist,0,1,kmeans,kmeans,10,0.756,0.7515244832007548
+fashion_mnist,0,1,marc,marc,10,0.756,0.7515244832007548
+fashion_mnist,0,1,vacs,herding,10,0.756,0.7515244832007548

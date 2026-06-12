@@ -1,0 +1,752 @@
+{
+  "methods": [
+    "random",
+    "herding",
+    "kcenter",
+    "boundary",
+    "kmeans",
+    "marc",
+    "badge",
+    "vacs"
+  ],
+  "ablation_methods": [
+    "vacs",
+    "vacs_no_rebuild",
+    "vacs_no_kmeans",
+    "vacs_no_marc",
+    "vacs_no_random"
+  ],
+  "robustness_learners": [
+    "knn3",
+    "logreg"
+  ],
+  "validation_fractions": [
+    0.2,
+    0.25,
+    0.33
+  ],
+  "repeated_validation_repeats": 5,
+  "budgets_per_class": [
+    1,
+    2,
+    4,
+    8
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "datasets": [
+    {
+      "name": "digits",
+      "n": 1797,
+      "classes": 10,
+      "kind": "dense"
+    },
+    {
+      "name": "iris",
+      "n": 150,
+      "classes": 3,
+      "kind": "dense"
+    },
+    {
+      "name": "wine",
+      "n": 178,
+      "classes": 3,
+      "kind": "dense"
+    },
+    {
+      "name": "breast_cancer",
+      "n": 569,
+      "classes": 2,
+      "kind": "dense"
+    },
+    {
+      "name": "20newsgroups",
+      "n": 18846,
+      "classes": 20,
+      "kind": "sparse_text"
+    }
+  ],
+  "headline": {
+    "vacs_low_budget_accuracy": 0.7061455779896032,
+    "best_static_method": "herding",
+    "best_static_low_budget_accuracy": 0.7059333595529326,
+    "absolute_gain": 0.00021221843667063034,
+    "relative_error_reduction": 0.0007216678381063426
+  },
+  "runtime_sec": 1910.7520925998688,
+  "stability": {
+    "comparator": "herding",
+    "pooled": {
+      "n": 80,
+      "delta": 0.02,
+      "ci": "[-1.38,+1.20]",
+      "wtl": "28/41/11",
+      "sign_p": 0.009475304279476404
+    },
+    "slices": {
+      "20NG": {
+        "n": 16,
+        "delta": "+4.54",
+        "ci": "[+2.43,+7.07]",
+        "wtl": "16/0/0",
+        "sign_p": 3.0517578125e-05
+      },
+      "Breast cancer": {
+        "n": 16,
+        "delta": "+0.84",
+        "ci": "[+0.37,+1.32]",
+        "wtl": "7/9/0",
+        "sign_p": 0.015625
+      },
+      "Digits": {
+        "n": 16,
+        "delta": "+0.19",
+        "ci": "[-0.12,+0.53]",
+        "wtl": "3/12/1",
+        "sign_p": 0.625
+      },
+      "Iris": {
+        "n": 16,
+        "delta": "-4.31",
+        "ci": "[-9.86,-0.14]",
+        "wtl": "2/9/5",
+        "sign_p": 0.453125
+      },
+      "Wine": {
+        "n": 16,
+        "delta": "-1.16",
+        "ci": "[-2.20,-0.35]",
+        "wtl": "0/11/5",
+        "sign_p": 0.0625
+      }
+    }
+  },
+  "seed_block_stability": {
+    "comparator": "herding",
+    "blocks": 8,
+    "units_per_block": 10,
+    "delta": 0.0002122184366706156,
+    "ci": "[-1.02,+0.97]",
+    "positive_blocks": 5,
+    "tied_blocks": 0,
+    "negative_blocks": 3,
+    "min_delta": -0.027439146740805553,
+    "max_delta": 0.021848673091761344
+  },
+  "oracle_regret": {
+    "random": {
+      "method": "random",
+      "regret": 0.07002943154322941,
+      "match_rate": 0.2625,
+      "severe_rate": 0.4625
+    },
+    "herding": {
+      "method": "herding",
+      "regret": 0.023371010862947177,
+      "match_rate": 0.4875,
+      "severe_rate": 0.1375
+    },
+    "kcenter": {
+      "method": "kcenter",
+      "regret": 0.05628890705815752,
+      "match_rate": 0.35,
+      "severe_rate": 0.4625
+    },
+    "boundary": {
+      "method": "boundary",
+      "regret": 0.407461039502817,
+      "match_rate": 0.0875,
+      "severe_rate": 0.9
+    },
+    "kmeans": {
+      "method": "kmeans",
+      "regret": 0.02637495638685993,
+      "match_rate": 0.55,
+      "severe_rate": 0.2
+    },
+    "marc": {
+      "method": "marc",
+      "regret": 0.023801631148677026,
+      "match_rate": 0.5,
+      "severe_rate": 0.1375
+    },
+    "badge": {
+      "method": "badge",
+      "regret": 0.3400969375301241,
+      "match_rate": 0.0,
+      "severe_rate": 0.9
+    },
+    "vacs": {
+      "method": "vacs",
+      "regret": 0.02315879242627656,
+      "match_rate": 0.6,
+      "severe_rate": 0.15
+    }
+  },
+  "ablation": {
+    "vacs": {
+      "ablation_method": "vacs",
+      "accuracy_mean": 0.7061455779896032,
+      "delta_vs_full": 0.0,
+      "macro_f1_mean": 0.7017996308508948,
+      "selected_mean": 11.4
+    },
+    "vacs_no_rebuild": {
+      "ablation_method": "vacs_no_rebuild",
+      "accuracy_mean": 0.7195692094851167,
+      "delta_vs_full": 0.013423631495513535,
+      "macro_f1_mean": 0.7166570055121885,
+      "selected_mean": 11.4
+    },
+    "vacs_no_kmeans": {
+      "ablation_method": "vacs_no_kmeans",
+      "accuracy_mean": 0.7040342232137747,
+      "delta_vs_full": -0.002111354775828461,
+      "macro_f1_mean": 0.698483612854224,
+      "selected_mean": 11.4
+    },
+    "vacs_no_marc": {
+      "ablation_method": "vacs_no_marc",
+      "accuracy_mean": 0.7069862212644569,
+      "delta_vs_full": 0.0008406432748538015,
+      "macro_f1_mean": 0.7026965926336048,
+      "selected_mean": 11.4
+    },
+    "vacs_no_random": {
+      "ablation_method": "vacs_no_random",
+      "accuracy_mean": 0.7056920151235889,
+      "delta_vs_full": -0.000453562866014226,
+      "macro_f1_mean": 0.7030740198956705,
+      "selected_mean": 11.4
+    }
+  },
+  "leave_one_dataset_out": [
+    {
+      "held_out": "None",
+      "units": 80,
+      "vacs_accuracy": 0.7061455779896032,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529326,
+      "gain": 0.00021221843667063034
+    },
+    {
+      "held_out": "20newsgroups",
+      "units": 64,
+      "vacs_accuracy": 0.8585480628654971,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.8696408991228071,
+      "gain": -0.011092836257309946
+    },
+    {
+      "held_out": "breast_cancer",
+      "units": 64,
+      "vacs_accuracy": 0.6492207151770625,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.6510570503183587,
+      "gain": -0.0018363351412962192
+    },
+    {
+      "held_out": "digits",
+      "units": 64,
+      "vacs_accuracy": 0.6768660002647817,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.6770636901819065,
+      "gain": -0.0001976899171247659
+    },
+    {
+      "held_out": "iris",
+      "units": 64,
+      "vacs_accuracy": 0.6917097502647818,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.6806805883300546,
+      "gain": 0.011029161934727139
+    },
+    {
+      "held_out": "wine",
+      "units": 64,
+      "vacs_accuracy": 0.6543833613758928,
+      "best_static_method": "kmeans",
+      "best_static_accuracy": 0.6518099156844229,
+      "gain": 0.002573445691469889
+    }
+  ],
+  "dataset_low_budget": [
+    {
+      "dataset": "20newsgroups",
+      "units": 16,
+      "vacs_accuracy": 0.09653563848602759,
+      "best_static_method": "random",
+      "best_static_accuracy": 0.12142951892465512,
+      "gain": -0.02489388043862753,
+      "top_selector": "boundary",
+      "top_selector_count": 9
+    },
+    {
+      "dataset": "breast_cancer",
+      "units": 16,
+      "vacs_accuracy": 0.9338450292397661,
+      "best_static_method": "kmeans",
+      "best_static_accuracy": 0.9353070175438596,
+      "gain": -0.0014619883040934978,
+      "top_selector": "herding",
+      "top_selector_count": 9
+    },
+    {
+      "dataset": "digits",
+      "units": 16,
+      "vacs_accuracy": 0.8232638888888889,
+      "best_static_method": "kmeans",
+      "best_static_accuracy": 0.8244212962962962,
+      "gain": -0.0011574074074073293,
+      "top_selector": "herding",
+      "top_selector_count": 12
+    },
+    {
+      "dataset": "iris",
+      "units": 16,
+      "vacs_accuracy": 0.7638888888888888,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.8069444444444445,
+      "gain": -0.043055555555555625,
+      "top_selector": "herding",
+      "top_selector_count": 7
+    },
+    {
+      "dataset": "wine",
+      "units": 16,
+      "vacs_accuracy": 0.9131944444444444,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.9247685185185185,
+      "gain": -0.01157407407407407,
+      "top_selector": "herding",
+      "top_selector_count": 11
+    }
+  ],
+  "full20news_stress": [
+    {
+      "dataset": "20newsgroups",
+      "display_name": "20 Newsgroups (20-class)",
+      "classes": 20,
+      "methods": "random,herding,kcenter,boundary,kmeans,marc,badge,vacs",
+      "units": 16,
+      "vacs_accuracy": 0.09653563848602759,
+      "best_static_method": "random",
+      "best_static_accuracy": 0.12142951892465512,
+      "gain": -0.02489388043862753,
+      "relative_error_reduction": -0.028334528617622246,
+      "top_selector": "boundary",
+      "top_selector_count": 9,
+      "selector_mix": "{\"boundary\": 9, \"herding\": 0, \"kcenter\": 0, \"kmeans\": 0, \"marc\": 0, \"random\": 7}",
+      "seed_blocks": 8
+    }
+  ],
+  "selector_mix_by_dataset": [
+    {
+      "random": 7,
+      "herding": 0,
+      "kcenter": 0,
+      "boundary": 9,
+      "kmeans": 0,
+      "marc": 0,
+      "dataset": "20newsgroups",
+      "units": 16
+    },
+    {
+      "random": 0,
+      "herding": 9,
+      "kcenter": 0,
+      "boundary": 0,
+      "kmeans": 6,
+      "marc": 1,
+      "dataset": "breast_cancer",
+      "units": 16
+    },
+    {
+      "random": 0,
+      "herding": 12,
+      "kcenter": 0,
+      "boundary": 0,
+      "kmeans": 4,
+      "marc": 0,
+      "dataset": "digits",
+      "units": 16
+    },
+    {
+      "random": 5,
+      "herding": 7,
+      "kcenter": 0,
+      "boundary": 1,
+      "kmeans": 3,
+      "marc": 0,
+      "dataset": "iris",
+      "units": 16
+    },
+    {
+      "random": 1,
+      "herding": 11,
+      "kcenter": 1,
+      "boundary": 0,
+      "kmeans": 2,
+      "marc": 1,
+      "dataset": "wine",
+      "units": 16
+    },
+    {
+      "random": 13,
+      "herding": 39,
+      "kcenter": 1,
+      "boundary": 10,
+      "kmeans": 15,
+      "marc": 2,
+      "dataset": "Pooled",
+      "units": 80
+    }
+  ],
+  "downstream_learners": [
+    {
+      "learner": "knn3",
+      "vacs_accuracy": 0.7061455779896032,
+      "vacs_macro_f1": 0.7017996308508948,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529326,
+      "gain": 0.00021221843667063034
+    },
+    {
+      "learner": "logreg",
+      "vacs_accuracy": 0.71795438255171,
+      "vacs_macro_f1": 0.7149472819413302,
+      "best_static_method": "kmeans",
+      "best_static_accuracy": 0.7199354310047019,
+      "gain": -0.0019810484529919625
+    }
+  ],
+  "validation_reliability": [
+    {
+      "slice": "Pooled",
+      "n": 80,
+      "top1_agreement": 0.5625,
+      "rank_correlation": 0.7771428571428572,
+      "regret": 0.02315879242627656,
+      "severe_rate": 0.15
+    },
+    {
+      "slice": "20NG",
+      "n": 16,
+      "top1_agreement": 0.5,
+      "rank_correlation": 0.7107142857142859,
+      "regret": 0.0315042447824549,
+      "severe_rate": 0.25
+    },
+    {
+      "slice": "Breast cancer",
+      "n": 16,
+      "top1_agreement": 0.75,
+      "rank_correlation": 0.9392857142857143,
+      "regret": 0.0029239766081871343,
+      "severe_rate": 0.0
+    },
+    {
+      "slice": "Digits",
+      "n": 16,
+      "top1_agreement": 0.75,
+      "rank_correlation": 0.9392857142857143,
+      "regret": 0.0028935185185185244,
+      "severe_rate": 0.0
+    },
+    {
+      "slice": "Iris",
+      "n": 16,
+      "top1_agreement": 0.375,
+      "rank_correlation": 0.5571428571428572,
+      "regret": 0.06111111111111113,
+      "severe_rate": 0.3125
+    },
+    {
+      "slice": "Wine",
+      "n": 16,
+      "top1_agreement": 0.4375,
+      "rank_correlation": 0.7392857142857143,
+      "regret": 0.017361111111111112,
+      "severe_rate": 0.1875
+    }
+  ],
+  "validation_confidence": [
+    {
+      "slice": "Pooled",
+      "n": 80,
+      "mean_gap": 0.021692988289799164,
+      "median_gap": 0.0,
+      "low_gap_rate": 0.625,
+      "very_low_gap_rate": 0.875
+    },
+    {
+      "slice": "20NG",
+      "n": 16,
+      "mean_gap": 0.06005533656761673,
+      "median_gap": 0.03229229836264402,
+      "low_gap_rate": 0.25,
+      "very_low_gap_rate": 0.5625
+    },
+    {
+      "slice": "Breast cancer",
+      "n": 16,
+      "mean_gap": 0.005625000000000005,
+      "median_gap": 0.0,
+      "low_gap_rate": 0.75,
+      "very_low_gap_rate": 1.0
+    },
+    {
+      "slice": "Digits",
+      "n": 16,
+      "mean_gap": 0.007539682539682541,
+      "median_gap": 0.0015873015873015817,
+      "low_gap_rate": 0.875,
+      "very_low_gap_rate": 1.0
+    },
+    {
+      "slice": "Iris",
+      "n": 16,
+      "mean_gap": 0.023148148148148154,
+      "median_gap": 0.0,
+      "low_gap_rate": 0.5625,
+      "very_low_gap_rate": 0.875
+    },
+    {
+      "slice": "Wine",
+      "n": 16,
+      "mean_gap": 0.01209677419354839,
+      "median_gap": 0.0,
+      "low_gap_rate": 0.6875,
+      "very_low_gap_rate": 0.9375
+    }
+  ],
+  "validation_gap_fallback": [
+    {
+      "variant": "VACS",
+      "fallback_count": 0,
+      "accuracy": 0.7061455779896032,
+      "delta_vs_vacs": 0.0
+    },
+    {
+      "variant": "Static herding",
+      "fallback_count": 80,
+      "accuracy": 0.7059333595529326,
+      "delta_vs_vacs": -0.00021221843667063034
+    },
+    {
+      "variant": "All gap < 2pt -> herding",
+      "fallback_count": 50,
+      "accuracy": 0.708048914894732,
+      "delta_vs_vacs": 0.001903336905128783
+    },
+    {
+      "variant": "Dense gap < 0.5pt -> herding",
+      "fallback_count": 42,
+      "accuracy": 0.7088673128823907,
+      "delta_vs_vacs": 0.0027217348927874863
+    },
+    {
+      "variant": "Dense gap < 2pt -> herding",
+      "fallback_count": 46,
+      "accuracy": 0.7090062017712796,
+      "delta_vs_vacs": 0.002860623781676397
+    }
+  ],
+  "validation_split_sensitivity": [
+    {
+      "validation_fraction": 0.2,
+      "units": 80,
+      "vacs_accuracy": 0.6969599602930803,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529326,
+      "gain": -0.0089733992598523,
+      "selector_agreement": 0.725
+    },
+    {
+      "validation_fraction": 0.25,
+      "units": 80,
+      "vacs_accuracy": 0.7061455779896032,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529326,
+      "gain": 0.00021221843667063034,
+      "selector_agreement": 1.0
+    },
+    {
+      "validation_fraction": 0.33,
+      "units": 80,
+      "vacs_accuracy": 0.7115729242731086,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529326,
+      "gain": 0.005639564720176016,
+      "selector_agreement": 0.65
+    }
+  ],
+  "repeated_validation": [
+    {
+      "slice": "Pooled",
+      "units": 80,
+      "repeats": 5,
+      "repeated_accuracy": 0.721310748966903,
+      "default_accuracy": 0.7061455779896032,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.7059333595529325,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": 0.015377389413970488,
+      "selector_agreement": 0.7125
+    },
+    {
+      "slice": "20NG",
+      "units": 16,
+      "repeats": 5,
+      "repeated_accuracy": 0.12429253625751681,
+      "default_accuracy": 0.09653563848602759,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.051103201273434734,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": 0.07318933498408207,
+      "selector_agreement": 0.5625
+    },
+    {
+      "slice": "Breast cancer",
+      "units": 16,
+      "repeats": 5,
+      "repeated_accuracy": 0.9345760233918128,
+      "default_accuracy": 0.9338450292397661,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.9254385964912281,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": 0.009137426900584722,
+      "selector_agreement": 0.9375
+    },
+    {
+      "slice": "Digits",
+      "units": 16,
+      "repeats": 5,
+      "repeated_accuracy": 0.8217592592592593,
+      "default_accuracy": 0.8232638888888889,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.821412037037037,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": 0.0003472222222222765,
+      "selector_agreement": 0.8125
+    },
+    {
+      "slice": "Iris",
+      "units": 16,
+      "repeats": 5,
+      "repeated_accuracy": 0.8069444444444445,
+      "default_accuracy": 0.7638888888888888,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.8069444444444445,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": 0.0,
+      "selector_agreement": 0.4375
+    },
+    {
+      "slice": "Wine",
+      "units": 16,
+      "repeats": 5,
+      "repeated_accuracy": 0.9189814814814814,
+      "default_accuracy": 0.9131944444444444,
+      "best_static_method": "herding",
+      "best_static_accuracy": 0.9247685185185186,
+      "pooled_best_static_accuracy": 0.7059333595529326,
+      "gain_vs_best_static": -0.0057870370370372015,
+      "selector_agreement": 0.8125
+    }
+  ],
+  "selection_cost": [
+    {
+      "slice": "Pooled",
+      "n": 80,
+      "reference_method": "herding",
+      "reference_selection_sec": 10.474978900019778,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 68.23875820016838,
+      "validation_candidate_evaluation_sec": 11.57701669994276,
+      "validation_phase_sec": 79.82023019998451,
+      "final_rebuild_sec": 7.389826100028586,
+      "vacs_selection_total_sec": 87.2100563000131,
+      "absolute_overhead_vs_reference_sec": 76.73507739999332,
+      "validation_share": 0.915264059977135
+    },
+    {
+      "slice": "20NG",
+      "n": 16,
+      "reference_method": "herding",
+      "reference_selection_sec": 10.249514800030738,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 66.14199910013122,
+      "validation_candidate_evaluation_sec": 9.356525800016243,
+      "validation_phase_sec": 75.49987100003636,
+      "final_rebuild_sec": 6.858657900011167,
+      "vacs_selection_total_sec": 82.35852890004753,
+      "absolute_overhead_vs_reference_sec": 72.1090141000168,
+      "validation_share": 0.916721947421681
+    },
+    {
+      "slice": "Breast cancer",
+      "n": 16,
+      "reference_method": "herding",
+      "reference_selection_sec": 0.03809220000403002,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 0.4102584999636747,
+      "validation_candidate_evaluation_sec": 0.5583418001479004,
+      "validation_phase_sec": 0.9694169000722468,
+      "final_rebuild_sec": 0.10679869996965863,
+      "vacs_selection_total_sec": 1.0762156000419054,
+      "absolute_overhead_vs_reference_sec": 1.0381234000378754,
+      "validation_share": 0.9007645866074603
+    },
+    {
+      "slice": "Digits",
+      "n": 16,
+      "reference_method": "herding",
+      "reference_selection_sec": 0.13747880002483726,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 1.3182902000262402,
+      "validation_candidate_evaluation_sec": 0.6915803998126648,
+      "validation_phase_sec": 2.010876999993343,
+      "final_rebuild_sec": 0.33613760001026094,
+      "vacs_selection_total_sec": 2.347014600003604,
+      "absolute_overhead_vs_reference_sec": 2.2095357999787666,
+      "validation_share": 0.8567807801409737
+    },
+    {
+      "slice": "Iris",
+      "n": 16,
+      "reference_method": "herding",
+      "reference_selection_sec": 0.01824129998567514,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 0.1863844000035897,
+      "validation_candidate_evaluation_sec": 0.48044479987584054,
+      "validation_phase_sec": 0.6674208999611437,
+      "final_rebuild_sec": 0.037858800002140924,
+      "vacs_selection_total_sec": 0.7052796999632847,
+      "absolute_overhead_vs_reference_sec": 0.6870383999776095,
+      "validation_share": 0.946320870990457
+    },
+    {
+      "slice": "Wine",
+      "n": 16,
+      "reference_method": "herding",
+      "reference_selection_sec": 0.03165179997449741,
+      "candidate_selectors_mean": 6.0,
+      "validation_candidate_selection_sec": 0.18182600004365668,
+      "validation_candidate_evaluation_sec": 0.4901239000901114,
+      "validation_phase_sec": 0.6726443999214098,
+      "final_rebuild_sec": 0.05037310003535822,
+      "vacs_selection_total_sec": 0.723017499956768,
+      "absolute_overhead_vs_reference_sec": 0.6913656999822706,
+      "validation_share": 0.9303293488216119
+    }
+  ]
+}
