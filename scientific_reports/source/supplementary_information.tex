@@ -7,6 +7,7 @@
 \usepackage{array}
 \usepackage{caption}
 \usepackage{setspace}
+\usepackage[hyphens]{url}
 \usepackage[pagewise]{lineno}
 
 \doublespacing
@@ -31,7 +32,7 @@ This table reports VACS-F minus herding differences over matched low-budget unit
 \begin{center}
 \scriptsize
 \setlength{\tabcolsep}{2.2pt}
-\input{../tables/Supplementary_Table_1_stability.tex}
+\resizebox{0.90\linewidth}{!}{\input{../tables/Supplementary_Table_1_stability.tex}}
 \end{center}
 
 \section*{Supplementary Table 2: ablation diagnostics}
@@ -40,7 +41,7 @@ The ablation table separates the validation wrapper from individual selector can
 
 \begin{center}
 \small
-\input{../tables/Supplementary_Table_2_ablation.tex}
+\resizebox{0.80\linewidth}{!}{\input{../tables/Supplementary_Table_2_ablation.tex}}
 \end{center}
 
 \section*{Supplementary Table 3: non-deployable dataset-hindsight static audit}
@@ -50,7 +51,7 @@ The per-dataset static reference is selected with hindsight from the low-budget 
 \begin{center}
 \scriptsize
 \setlength{\tabcolsep}{2.2pt}
-\input{../tables/Supplementary_Table_3_hindsight_static.tex}
+\resizebox{0.90\linewidth}{!}{\input{../tables/Supplementary_Table_3_hindsight_static.tex}}
 \end{center}
 
 \section*{Supplementary Table 4: validation-size reliability}
@@ -60,7 +61,7 @@ This diagnostic repeats the internal validation-ranking analysis at 10\%, 20\%, 
 \begin{center}
 \scriptsize
 \setlength{\tabcolsep}{2.2pt}
-\input{../tables/Supplementary_Table_4_validation_size.tex}
+\resizebox{0.90\linewidth}{!}{\input{../tables/Supplementary_Table_4_validation_size.tex}}
 \end{center}
 
 \section*{Supplementary Table 5: selection cost}
@@ -69,7 +70,7 @@ The cost diagnostic reports selection-only time for herding and validation-plus-
 
 \begin{center}
 \small
-\input{../tables/Supplementary_Table_5_selection_cost.tex}
+\resizebox{0.90\linewidth}{!}{\input{../tables/Supplementary_Table_5_selection_cost.tex}}
 \end{center}
 
 \section*{Supplementary Table 6: frozen transformer probes}
@@ -78,7 +79,7 @@ The frozen transformer probes are boundary evidence. They do not support a broad
 
 \begin{center}
 \small
-\input{../tables/Supplementary_Table_6_transformer_probe.tex}
+\resizebox{0.88\linewidth}{!}{\input{../tables/Supplementary_Table_6_transformer_probe.tex}}
 \end{center}
 
 \section*{Supplementary Tables 7 and 8: frozen image-embedding probes}
@@ -87,12 +88,12 @@ The image probes widen benchmark coverage but tie the strongest static selector 
 
 \begin{center}
 \small
-\resizebox{0.62\linewidth}{!}{\input{../tables/Supplementary_Table_7_fashionmnist_probe.tex}}
+\resizebox{0.80\linewidth}{!}{\input{../tables/Supplementary_Table_7_fashionmnist_probe.tex}}
 \end{center}
 
 \begin{center}
 \small
-\resizebox{0.62\linewidth}{!}{\input{../tables/Supplementary_Table_8_cifar_probe.tex}}
+\resizebox{0.80\linewidth}{!}{\input{../tables/Supplementary_Table_8_cifar_probe.tex}}
 \end{center}
 
 \section*{Supplementary Table 9: full 20-class sparse-text stress boundary}
@@ -101,11 +102,11 @@ The compact full-20-class TF-IDF stress check is negative for VACS relative to s
 
 \begin{center}
 \small
-\input{../tables/Supplementary_Table_9_full20news.tex}
+\resizebox{0.90\linewidth}{!}{\input{../tables/Supplementary_Table_9_full20news.tex}}
 \end{center}
 
 \section*{Supplementary Note 2: reproducibility files}
 
-The project package includes the Python scripts used to regenerate the primary result manifest, all tables included in the manuscript and supplementary information, the workflow and diagnostic figures, and the consistency checks that compare manuscript claims with generated result files. The main experiment driver is \texttt{experiments/run\_vacs\_experiments.py}. Covertype audits, repeated-validation audits, validation-size diagnostics, and figure generation are implemented as separate companion scripts for auditability.
+The project package includes the Python scripts used to regenerate the primary result manifest, all tables included in the manuscript and supplementary information, the workflow and diagnostic figures, and the consistency checks that compare manuscript claims with generated result files. The public code repository is available at \url{https://github.com/HaotongLuan/validation-aligned-coreset-selection}. The main experiment driver is \texttt{experiments/run\_vacs\_experiments.py}. Covertype audits, repeated-validation audits, validation-size diagnostics, and figure generation are implemented as separate companion scripts for auditability.
 
 \end{document}
