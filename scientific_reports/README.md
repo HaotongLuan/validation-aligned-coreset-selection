@@ -27,6 +27,7 @@ the project root.
 - `submission_materials/declarations_and_statements.md`: required declaration text.
 - `submission_materials/data_code_availability.md`: standalone availability statements.
 - `submission_materials/reference_verification_report.md`: three-source verification trail for all 35 manuscript references.
+- `submission_materials/reference_relevance_audit.md`: citation-to-manuscript relevance map for the same 35 references.
 - `submission_materials/submission_checklist.md`: pre-submission checklist.
 - `submission_materials/suggested_reviewers_template.csv`: optional reviewer suggestion template.
 
