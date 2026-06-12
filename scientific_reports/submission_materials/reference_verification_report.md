@@ -11,9 +11,9 @@ used as the verification sources.
 
 ## Coverage Summary
 
-- References in manuscript: 31.
-- Citation keys used in text: 31.
-- Bibliography entries defined: 31.
+- References in manuscript: 35.
+- Citation keys used in text: 35.
+- Bibliography entries defined: 35.
 - Missing citation keys after LaTeX build: 0.
 - Uncited bibliography entries after source scan: 0.
 
@@ -27,6 +27,10 @@ used as the verification sources.
 | `sener2018active` | Core-set active learning baseline context. | OpenReview ICLR page: `H1aIuk-RW` | DBLP: `conf/iclr/SenerS18` | arXiv record: `1708.00489` |
 | `ash2020deep` | BADGE uncertainty-diversity selector context. | OpenReview ICLR page: `ryghZJBKPS` | DBLP: `conf/iclr/AshZK0A20` | arXiv record: `1906.03671` |
 | `feldman2020coresets` | General coreset survey. | DOI/Crossref: `10.1002/widm.1335` | DBLP: `journals/widm/Feldman20` | Wiley WIREs Data Mining and Knowledge Discovery page |
+| `guo2022deepcore` | Recent deep coreset benchmark/library context. | DOI/Crossref: `10.1007/978-3-031-12423-5_14` | DBLP: `conf/dexa/GuoZB22` | arXiv record: `2204.08499` |
+| `xia2023moderate` | Recent scenario-robust data selection context. | OpenReview ICLR page: `7D5EECbOaf9` | DBLP author/title metadata for ICLR 2023 | Official Moderate Coreset code/repository citation metadata |
+| `xia2024refined` | Recent minimal-coreset-size objective. | PMLR page: `v235/xia24b.html` | DBLP: `conf/icml/XiaLZWWL24` | arXiv/author-hosted preprint metadata linked from public project pages |
+| `chen2025squaredloss` | Recent loss-based coreset objective. | PMLR page: `v267/chen25q.html` | OpenReview ICML page: `UeGo9RmpRY` | ACM Digital Library bibliographic page |
 | `wei2015submodularity` | Submodular data subset selection. | PMLR page: `v37/wei15.html` | DBLP: `conf/icml/WeiIB15` | PMLR PDF linked from the proceedings page |
 | `bachem2017practical` | Practical coreset construction overview. | arXiv abstract: `1703.06476` | arXiv PDF linked from the abstract page | Author/institution metadata on the arXiv record |
 | `mirzasoleiman2020craig` | CRAIG/data-efficient coreset training. | PMLR page: `v119/mirzasoleiman20a.html` | DBLP: `conf/icml/MirzasoleimanBL20` | PMLR PDF linked from the proceedings page |

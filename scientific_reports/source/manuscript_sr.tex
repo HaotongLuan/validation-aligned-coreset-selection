@@ -51,7 +51,7 @@ Few-shot classifiers can be dominated by the initial choice of which labelled ex
 
 When a classifier is trained from only one or two labelled examples per class, the selection rule can matter as much as the downstream model. A prototype-like selector favours central examples, a coverage selector favours diversity, and an uncertainty-oriented selector favours boundary cases. Each rule encodes a useful bias, but the useful bias can change with the dataset, representation, budget, and classifier.
 
-This paper studies the selector itself as a training-time decision. The setting is deliberately narrow: labels are already available inside the training split, a small class-balanced subset must be retained, and the external test set must not influence the choice. This differs from active learning, where examples are chosen for annotation through uncertainty, committee, core-set, or gradient-diversity criteria \citep{lewis1994sequential,freund1997query,settles2009active,sener2018active,ash2020deep}. It is closer to coreset, data subset, and prototype selection, where the goal is to retain a small informative set for training or inference \citep{feldman2020coresets,wei2015submodularity,bachem2017practical,mirzasoleiman2020craig,killamsetty2021glister,killamsetty2021gradmatch}.
+This paper studies the selector itself as a training-time decision. The setting is deliberately narrow: labels are already available inside the training split, a small class-balanced subset must be retained, and the external test set must not influence the choice. This differs from active learning, where examples are chosen for annotation through uncertainty, committee, core-set, or gradient-diversity criteria \citep{lewis1994sequential,freund1997query,settles2009active,sener2018active,ash2020deep}. It is closer to coreset, data subset, and prototype selection, where the goal is to retain a small informative set for training or inference \citep{feldman2020coresets,wei2015submodularity,bachem2017practical,mirzasoleiman2020craig,killamsetty2021glister,killamsetty2021gradmatch}. Recent deep-learning coreset work has also emphasized benchmark sensitivity, scenario robustness, and smaller coreset sizes under explicit performance constraints \citep{guo2022deepcore,xia2023moderate,xia2024refined,chen2025squaredloss}.
 
 The nearest-neighbour and few-shot literature provides another context for this problem. Classical nearest-neighbour work established both the strength and storage cost of instance-based prediction \citep{cover1967nearest,hart1968condensed}, while edited and prototype-selection methods study how to reduce stored examples without losing predictive structure \citep{wilson1972edited,brighton2002advances,olvera2010review,garcia2012prototype}. Modern few-shot learning often moves the same pressure into learned embedding spaces through matching, meta-learning, prototype, and relation-network models \citep{vinyals2016matching,finn2017maml,snell2017prototypical,sung2018relation}. VACS keeps the representation and learner simple so that the selector decision itself remains inspectable.
 
@@ -217,9 +217,9 @@ The authors declare no competing interests.
 
 \section*{Additional information}
 
-Correspondence and requests for materials should be addressed to the corresponding author listed on the title page.
+None.
 
-\begin{thebibliography}{31}
+\begin{thebibliography}{35}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -263,6 +263,38 @@ Dan Feldman.
 \newblock Core-sets: An updated survey.
 \newblock \emph{Wiley Interdisciplinary Reviews: Data Mining and Knowledge
   Discovery}, 10\penalty0 (1):\penalty0 e1335, 2020.
+
+\bibitem[Guo et~al.(2022)Guo, Zhao, and Bai]{guo2022deepcore}
+Chengcheng Guo, Bo Zhao, and Yanbing Bai.
+\newblock DeepCore: A comprehensive library for coreset selection in deep
+  learning.
+\newblock In \emph{Database and Expert Systems Applications}, volume 13426 of
+  \emph{Lecture Notes in Computer Science}, pages 181--195. Springer, 2022.
+\newblock \doi{10.1007/978-3-031-12423-5_14}
+
+\bibitem[Xia et~al.(2023)Xia, Liu, Yu, Shen, Han, and Liu]{xia2023moderate}
+Xiaobo Xia, Jiale Liu, Jun Yu, Xu Shen, Bo Han, and Tongliang Liu.
+\newblock Moderate coreset: A universal method of data selection for real-world
+  data-efficient deep learning.
+\newblock In \emph{International Conference on Learning Representations},
+  2023.
+
+\bibitem[Xia et~al.(2024)Xia, Liu, Zhang, Wu, Wei, and Liu]{xia2024refined}
+Xiaobo Xia, Jiale Liu, Shaokun Zhang, Qingyun Wu, Hongxin Wei, and Tongliang
+  Liu.
+\newblock Refined coreset selection: Towards minimal coreset size under model
+  performance constraints.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning}, volume 235 of \emph{Proceedings of Machine Learning Research},
+  pages 54082--54103, 2024.
+
+\bibitem[Chen(2025)]{chen2025squaredloss}
+Jianting Chen.
+\newblock Efficient core-set selection for deep learning through squared loss
+  minimization.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine
+  Learning}, volume 267 of \emph{Proceedings of Machine Learning Research},
+  pages 8065--8076, 2025.
 
 \bibitem[Wei et~al.(2015)Wei, Iyer, and Bilmes]{wei2015submodularity}
 Kai Wei, Rishabh Iyer, and Jeff Bilmes.
