@@ -2,6 +2,7 @@
 \usepackage[letterpaper,margin=1in]{geometry}
 \usepackage{times}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{booktabs}
 \usepackage{amsmath,amssymb}
 \usepackage[numbers,sort&compress]{natbib}
@@ -64,7 +65,7 @@ The scientific question is not whether validation, nearest-neighbour classificat
 
 VACS evaluates a predeclared selector portfolio using only data from the outer training split. In the fast protocol, VACS-F, the training split is stratified into a selector pool and an internal validation set. Each candidate selector builds a class-balanced subset from the pool, the downstream classifier is trained on that subset, and validation accuracy is measured on the internal validation set. Macro-F1 and a fixed selector order break ties. VACS then rebuilds the selected rule on the complete outer training split. Figure~\ref{fig:workflow} summarizes the protocol.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.98\linewidth]{../figures/Figure_1_vacs_workflow.pdf}
 \caption{\textbf{Training-only VACS workflow.} Candidate selectors are evaluated on internal validation splits drawn from the training data. The held-out test set is used only for final evaluation. After the selector has been chosen, the selected rule is rebuilt on the full outer training split.}
@@ -77,7 +78,9 @@ VACS-R repeats the internal validation-ranking step five times with independentl
 
 The main benchmark uses five public datasets available through scikit-learn: digits, iris, wine, breast cancer, and the full 20-class 20 Newsgroups corpus. The main analysis averages budgets of one and two examples per class across eight random seeds and five datasets, producing 80 matched low-budget units. A distance-weighted 3-nearest-neighbour classifier is trained on the selected examples.
 
-\begin{table}[t]
+The fast protocol reaches 70.6\% mean accuracy, numerically tying the best pooled static selector, herding (Table~\ref{tab:low_budget}). The unrounded paired difference is only +0.02 percentage points. A bootstrap interval over the matched low-budget units is [-1.38,+1.20] points, so VACS-F should be read as a near-tie rather than a mean-effect win. Boundary-only selection reaches 32.2\%, and the BADGE-inspired uncertainty-diversity comparator reaches 38.9\%, showing that boundary or uncertainty-diversity bias alone is not sufficient under this tiny selected-label budget.
+
+\begin{table}[H]
 \centering
 \caption{\textbf{Low-budget performance over budgets one and two.} Values are percentages averaged over five datasets and eight random seeds. VACS here denotes the fast single-split protocol, VACS-F.}
 \label{tab:low_budget}
@@ -85,11 +88,9 @@ The main benchmark uses five public datasets available through scikit-learn: dig
 \input{../tables/Table_1_low_budget.tex}
 \end{table}
 
-The fast protocol reaches 70.6\% mean accuracy, numerically tying the best pooled static selector, herding (Table~\ref{tab:low_budget}). The unrounded paired difference is only +0.02 percentage points. A bootstrap interval over the matched low-budget units is [-1.38,+1.20] points, so VACS-F should be read as a near-tie rather than a mean-effect win. Boundary-only selection reaches 32.2\%, and the BADGE-inspired uncertainty-diversity comparator reaches 38.9\%, showing that boundary or uncertainty-diversity bias alone is not sufficient under this tiny selected-label budget.
-
 The selector choices are heterogeneous (Figure~\ref{fig:selector_mix}). On full 20-class 20 Newsgroups, VACS-F chooses boundary selection in 9 of 16 low-budget units and random selection in the other 7. Dense datasets more often route to representative rules such as herding, k-means, and MARC. This supports the premise that the best selector bias is not fixed across data regimes, while also identifying a sparse-text failure boundary: in a compact full-20-class TF-IDF stress summary, VACS reaches 9.7\% and static random reaches 12.1\%.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.98\linewidth]{../figures/Figure_2_selector_mix.pdf}
 \caption{\textbf{Selector choices in the low-budget regime.} VACS-F uses different selector biases across datasets. The pattern is mechanism evidence rather than proof of universal dominance.}
@@ -100,7 +101,7 @@ The selector choices are heterogeneous (Figure~\ref{fig:selector_mix}). On full 
 
 The strongest positive evidence comes from VACS-R. On the same 80 matched low-budget units, VACS-R reaches 72.1\% pooled accuracy and improves over herding by +1.54 points, with a 95\% bootstrap interval of [+0.68,+2.49] and a 30/43/7 win/tie/loss pattern. Against a stricter non-deployable reference that chooses the best static selector separately for each dataset using hindsight, VACS-R is essentially tied at -0.13 points with interval [-0.42,+0.15] (Table~\ref{tab:repeated}). Thus VACS-R is the strongest evaluated training-only deployable protocol in this study, but it does not exceed a hindsight-tuned static rule.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering
 \caption{\textbf{Paired audit for the repeated-validation protocol.} The per-dataset static reference is a non-deployable hindsight diagnostic, not a usable baseline for deployment. Values are percentages except for the paired delta and confidence interval, which are percentage points.}
 \label{tab:repeated}
@@ -110,7 +111,7 @@ The strongest positive evidence comes from VACS-R. On the same 80 matched low-bu
 
 Validation-size diagnostics confirm that the result depends on the internal validation protocol but is not driven by one unchecked split. A reliability diagnostic at 10\%, 20\%, 25\%, and 33\% validation fractions reports pooled gains over herding of +0.94, +0.10, +1.13, and +0.86 points, respectively. A separate split-sensitivity rerun at 20\%, 25\%, and 33\% reports gains of -0.90, +0.02, and +0.56 points. The 20\% split is the weakest and nearly tied, while the repeated protocol reduces split-ranking noise. Figure~\ref{fig:protocol} summarizes the validation-fraction and repeat-validation evidence.
 
-\begin{figure}[t]
+\begin{figure}[H]
 \centering
 \includegraphics[width=0.98\linewidth]{../figures/Figure_3_protocol_robustness.pdf}
 \caption{\textbf{Protocol robustness.} Left: validation-size sensitivity and selector agreement. Right: pooled and dataset-level VACS-F versus VACS-R accuracy.}
@@ -121,7 +122,7 @@ Validation-size diagnostics confirm that the result depends on the internal vali
 
 A larger tabular audit uses the UCI Covertype dataset \citep{blackard1998covertype}. The confirmatory rerun samples 62,240 examples, covers all seven classes, uses 16 random seeds and budgets one and two, and produces 32 matched seed-budget units. VACS-R reaches 44.0\% mean accuracy, improves over herding by +5.42 points with a 95\% bootstrap interval of [+3.52,+7.33], and has a 16/16/0 win/tie/loss pattern against herding. However, VACS-R exactly matches MARC at +0.00 points with a 0/32/0 pattern (Table~\ref{tab:covtype}). The audit therefore supports avoidance of a weak static default, not superiority over the best static bias in the portfolio.
 
-\begin{table}[t]
+\begin{table}[H]
 \centering
 \caption{\textbf{Confirmatory Covertype audit.} The audit uses a fresh 62,240-example stratified sample and 32 matched seed-budget units. Values are percentages except for paired notes.}
 \label{tab:covtype}
