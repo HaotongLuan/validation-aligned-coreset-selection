@@ -1,0 +1,5 @@
+protocol,selected_rule,units,conditional_mean_accuracy_percent,conditional_mean_random_accuracy_percent,conditional_delta_vs_random_pp,contribution_to_all_16_units_delta_pp,positive_contribution_to_all_16_units_pp,negative_contribution_to_all_16_units_pp,wins_ties_losses_vs_random,max_abs_rebuild_residual_vs_selected_static_pp
+VACS-F,boundary,9,7.38317022364,11.8087489683,-4.42557874464,-2.48938804386,0.487486735055,-2.97687477892,4/0/5,0
+VACS-F,random,7,12.5726413664,12.5726413664,0,0,0,0,0/7/0,0
+VACS-R,boundary,2,7.84400424478,5.55359037849,2.29041386629,0.286301733286,0.286301733286,0,2/0/0,0
+VACS-R,random,14,13.0842892516,13.0842892516,0,0,0,0,0/14/0,0

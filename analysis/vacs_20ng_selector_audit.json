@@ -1,0 +1,252 @@
+{
+  "audit_name": "20ng_selector_audit",
+  "comparisons_vs_random": {
+    "VACS-F": {
+      "mean_accuracy": 0.09653563848602754,
+      "mean_delta_vs_herding_pp": 4.5432437212592856,
+      "mean_delta_vs_random_pp": -2.4893880438627525,
+      "mean_herding_accuracy": 0.0511032012734347,
+      "mean_random_accuracy": 0.12142951892465507,
+      "mean_rank_correlation": 0.7107142857142859,
+      "mean_test_regret_vs_validation_top_pp": 3.1504244782454904,
+      "selector_counts": {
+        "boundary": 9,
+        "herding": 0,
+        "kcenter": 0,
+        "kmeans": 0,
+        "marc": 0,
+        "random": 7
+      },
+      "severe_regret_rate_over_5pp": 0.25,
+      "top1_transfer_rate": 0.5,
+      "wins_ties_losses_vs_herding": "16/0/0",
+      "wins_ties_losses_vs_random": "4/7/5"
+    },
+    "VACS-R": {
+      "mean_accuracy": 0.12429253625751675,
+      "mean_delta_vs_herding_pp": 7.318933498408206,
+      "mean_delta_vs_random_pp": 0.2863017332861687,
+      "mean_herding_accuracy": 0.0511032012734347,
+      "mean_random_accuracy": 0.12142951892465507,
+      "mean_rank_correlation": 0.7714285714285715,
+      "mean_test_regret_vs_validation_top_pp": 0.3747347010965695,
+      "selector_counts": {
+        "boundary": 2,
+        "herding": 0,
+        "kcenter": 0,
+        "kmeans": 0,
+        "marc": 0,
+        "random": 14
+      },
+      "severe_regret_rate_over_5pp": 0.0,
+      "top1_transfer_rate": 0.6875,
+      "wins_ties_losses_vs_herding": "16/0/0",
+      "wins_ties_losses_vs_random": "2/14/0"
+    }
+  },
+  "inputs": {
+    "files": [
+      "vacs_all_results.csv",
+      "vacs_repeated_validation_results.csv",
+      "vacs_validation_scores.csv",
+      "vacs_repeated_validation_scores.csv",
+      "vacs_full20news_stress_results.csv",
+      "vacs_full20news_stress_summary_row.csv",
+      "vacs_ablation_results.csv"
+    ],
+    "sha256": {
+      "vacs_ablation_results.csv": "995482b96027bea4d00eb986add71d1ef02ef34ff78c763e6d7625f253636337",
+      "vacs_all_results.csv": "24f56b000672d60be73291de828c0faaada6099b1fd1bee7c6493f843b53ec24",
+      "vacs_full20news_stress_results.csv": "f28aaf838bad3705e97217036882451a4480dbe3d1ea7f560783a1b1b5b842f6",
+      "vacs_full20news_stress_summary_row.csv": "cf53d82cf0a9ae5669b29734b30c6fdc721139099327b0fcd69d9b6b1cd3481e",
+      "vacs_repeated_validation_results.csv": "1daf77419ea67a617c94e08817af216330f6980b985f6531ffb4047af9e1fd1b",
+      "vacs_repeated_validation_scores.csv": "e6d4bbb90c8a749687726c9b52e04878c6eee8a82131f3c9caa6ca92968eac55",
+      "vacs_validation_scores.csv": "85e600c56652f1001adda0b27041cf82d7953ad0ce7182ff60f8bd01511e8611"
+    }
+  },
+  "outputs": {
+    "decomposition_csv": "vacs_20ng_selector_decomposition.csv",
+    "rankings_csv": "vacs_20ng_selector_rankings.csv",
+    "summary_csv": "vacs_20ng_selector_summary.csv",
+    "units_csv": "vacs_20ng_selector_units.csv"
+  },
+  "rebuild_decomposition": {
+    "F_selected_matches_corresponding_static_metrics": true,
+    "F_selected_random_matches_static_random": "7/7",
+    "R_selected_matches_corresponding_static_metrics": true,
+    "R_selected_random_matches_static_random": "14/14",
+    "aggregate_csv_limitation": "The saved CSVs contain metrics and selector labels, not selected row indices; code semantics establish identity, while metric equality is an independent consistency check.",
+    "no_rebuild_matches_corresponding_static_metrics": "0/16",
+    "selector_conditioned_decomposition": [
+      {
+        "conditional_delta_vs_random_pp": -4.425578744644893,
+        "conditional_mean_accuracy_percent": 7.383170223637145,
+        "conditional_mean_random_accuracy_percent": 11.808748968282037,
+        "contribution_to_all_16_units_delta_pp": -2.4893880438627525,
+        "max_abs_rebuild_residual_vs_selected_static_pp": 0.0,
+        "negative_contribution_to_all_16_units_pp": -2.9768747789175807,
+        "positive_contribution_to_all_16_units_pp": 0.4874867350548282,
+        "protocol": "VACS-F",
+        "selected_rule": "boundary",
+        "units": 9,
+        "wins_ties_losses_vs_random": "4/0/5"
+      },
+      {
+        "conditional_delta_vs_random_pp": 0.0,
+        "conditional_mean_accuracy_percent": 12.572641366415683,
+        "conditional_mean_random_accuracy_percent": 12.572641366415683,
+        "contribution_to_all_16_units_delta_pp": 0.0,
+        "max_abs_rebuild_residual_vs_selected_static_pp": 0.0,
+        "negative_contribution_to_all_16_units_pp": 0.0,
+        "positive_contribution_to_all_16_units_pp": 0.0,
+        "protocol": "VACS-F",
+        "selected_rule": "random",
+        "units": 7,
+        "wins_ties_losses_vs_random": "0/7/0"
+      },
+      {
+        "conditional_delta_vs_random_pp": 2.2904138662893496,
+        "conditional_mean_accuracy_percent": 7.8440042447824485,
+        "conditional_mean_random_accuracy_percent": 5.5535903784931,
+        "contribution_to_all_16_units_delta_pp": 0.2863017332861687,
+        "max_abs_rebuild_residual_vs_selected_static_pp": 0.0,
+        "negative_contribution_to_all_16_units_pp": 0.0,
+        "positive_contribution_to_all_16_units_pp": 0.2863017332861687,
+        "protocol": "VACS-R",
+        "selected_rule": "boundary",
+        "units": 2,
+        "wins_ties_losses_vs_random": "2/0/0"
+      },
+      {
+        "conditional_delta_vs_random_pp": 0.0,
+        "conditional_mean_accuracy_percent": 13.084289251604423,
+        "conditional_mean_random_accuracy_percent": 13.084289251604423,
+        "contribution_to_all_16_units_delta_pp": 0.0,
+        "max_abs_rebuild_residual_vs_selected_static_pp": 0.0,
+        "negative_contribution_to_all_16_units_pp": 0.0,
+        "positive_contribution_to_all_16_units_pp": 0.0,
+        "protocol": "VACS-R",
+        "selected_rule": "random",
+        "units": 14,
+        "wins_ties_losses_vs_random": "0/14/0"
+      }
+    ]
+  },
+  "scope": {
+    "budgets_per_class": [
+      1,
+      2
+    ],
+    "classes": 20,
+    "dataset": "20newsgroups",
+    "main_rows": 128,
+    "repeated_validation_fraction": 0.25,
+    "repeated_validation_repeats": 5,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "stress_matches_main_rows": true,
+    "stress_rows": 128,
+    "units": 16
+  },
+  "selector_choices": {
+    "VACS-F": {
+      "boundary": 9,
+      "herding": 0,
+      "kcenter": 0,
+      "kmeans": 0,
+      "marc": 0,
+      "random": 7
+    },
+    "VACS-R": {
+      "boundary": 2,
+      "herding": 0,
+      "kcenter": 0,
+      "kmeans": 0,
+      "marc": 0,
+      "random": 14
+    }
+  },
+  "source_code": {
+    "contract_checks": {
+      "candidate_order": true,
+      "default_classifier_knn3": true,
+      "deterministic_class_order": true,
+      "deterministic_subset_order": true,
+      "f_full_training_rebuild_same_seed": true,
+      "f_ranking_rule": true,
+      "f_rebuild_default_true": true,
+      "f_validation_fraction": true,
+      "five_repeats": true,
+      "fresh_random_rng_in_select_indices": true,
+      "full_categories_no_category_filter": true,
+      "no_rebuild_same_f_inputs": true,
+      "outer_split_shared_seed": true,
+      "r_full_training_rebuild_same_seed": true,
+      "r_ranking_rule": true,
+      "r_validation_fraction": true,
+      "random_without_replacement": true,
+      "repeated_shared_training_inputs": true,
+      "static_shared_training_inputs": true
+    },
+    "file": "run_vacs_experiments.py",
+    "function_line_evidence": {
+      "load_datasets": {
+        "end_line": 153,
+        "start_line": 121
+      },
+      "make_classifier": {
+        "end_line": 415,
+        "start_line": 400
+      },
+      "preprocess_text": {
+        "end_line": 118,
+        "start_line": 109
+      },
+      "repeated_validation_aligned_select": {
+        "end_line": 556,
+        "start_line": 501
+      },
+      "run": {
+        "end_line": 944,
+        "start_line": 559
+      },
+      "select_indices": {
+        "end_line": 397,
+        "start_line": 367
+      },
+      "validation_aligned_select": {
+        "end_line": 498,
+        "start_line": 428
+      }
+    },
+    "rebuild_interpretation": "The selected rule is rebuilt on the full outer training split; the random selector creates a fresh default_rng(seed) inside each call. Therefore a selected random rebuild uses the same random coreset as static random for the same seed and budget."
+  },
+  "validation_ranking_transfer": {
+    "VACS-F": {
+      "mean_rank_correlation": 0.7107142857142859,
+      "mean_test_regret_pp": 3.1504244782454904,
+      "severe_regret_rate_over_5pp": 0.25,
+      "top1_agreement": 0.5
+    },
+    "VACS-R": {
+      "mean_rank_correlation": 0.7714285714285715,
+      "mean_test_regret_pp": 0.3747347010965695,
+      "severe_regret_rate_over_5pp": 0.0,
+      "top1_agreement": 0.6875
+    },
+    "does_not_support": [
+      "A general validation-to-test ranking law beyond this dataset, budgets, seeds, and learner.",
+      "A causal mechanism for why boundary or random is selected.",
+      "Independent replication across 16 datasets; the 16 rows are seed-budget units from one dataset."
+    ],
+    "supports": "Within these 16 saved units, the logs quantify validation top choice, test top choice, rank correlation, and test regret."
+  }
+}

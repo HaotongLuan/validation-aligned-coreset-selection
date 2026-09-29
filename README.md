@@ -12,6 +12,7 @@ repository does not claim broad state-of-the-art performance.
 ## Repository Contents
 
 - `experiments/`: experiment, audit, figure-generation, and consistency-check scripts.
+- `analysis/`: saved-result revision audits, including the direct-MARC audit and the full-20-class 20 Newsgroups selector-transfer audit.
 - `results/tables/`: generated CSV and LaTeX result tables used by the manuscript.
 - `results/figures/`: generated figures and audit plots.
 - `results/*_manifest.json`: run manifests and headline result metadata.
@@ -36,6 +37,17 @@ Verify that the manuscript claims match the generated result artifacts:
 ```bash
 python experiments/check_claim_consistency.py
 ```
+
+Run the read-only revision audits from the repository root:
+
+```bash
+python analysis/vacs_revision_audit.py
+python analysis/vacs_20ng_selector_audit.py \\
+  --results-root results \\
+  --experiment-code experiments/run_vacs_experiments.py
+```
+
+These audits consume saved results and do not run new classifier experiments.
 
 Regenerate the workflow and protocol-robustness figures:
 

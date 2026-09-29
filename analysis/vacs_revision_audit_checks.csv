@@ -1,0 +1,7 @@
+check,status,value,expected
+main_unit_count,PASS,80,80
+direct_marc_summary_rows,PASS,14,14
+existing_herding_ci_and_wtl,PASS,12,all checks match
+table1_accuracy_and_macro_f1_sample_sd_ddof1,PASS,8,all eight methods match
+full20news_raw_trace,PASS,True,True
+vacs_r_marc_matched_unit_diagnostic,PASS,"positive, tied, and negative matched-unit deltas",three delta categories partition the 80 matched units
